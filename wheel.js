@@ -60,7 +60,11 @@ export class Wheel {
       this.ctx.textAlign = 'right';
       this.ctx.fillStyle = 'white';
       this.ctx.font = `bold ${Math.max(12, radius/10)}px Inter`;
-      this.ctx.fillText(entry, radius - 40, 5);
+      
+      // Calculate max text width to prevent overflowing the center or edges
+      const maxTextWidth = radius - 50; 
+      this.ctx.fillText(entry, radius - 30, 5, maxTextWidth);
+      
       this.ctx.restore();
     });
 
