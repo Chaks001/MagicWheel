@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Magic Spin Wheel</title>
+    <meta name="description" content="La roue de la fortune premium pour smartphone" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>MAGIC SPIN</h1>
+      </header>
+      
+      <div class="wheel-container">
+        <div class="indicator"></div>
+        <canvas id="wheelCanvas"></canvas>
+      </div>
+
+      <div class="controls">
+        <button id="spinBtn" class="spin-btn">FAIRE TOURNER</button>
+
+        <div class="input-group">
+          <input type="text" id="entryInput" placeholder="Ajouter une option..." maxlength="25">
+          <button id="addBtn">AJOUTER</button>
+        </div>
+        
+        <ul id="entryList" class="entry-list">
+          <!-- Items will be added here -->
+        </ul>
+      </div>
+    </div>
+
+    <div id="resultOverlay" class="result-overlay">
+      <div class="result-card">
+        <div class="result-title">Le gagnant est</div>
+        <div id="resultName" class="result-name">?</div>
+      </div>
+      <button id="closeResultBtn">FERMER</button>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
